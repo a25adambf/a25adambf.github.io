@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SUA & TERRA — El sabor del norte a la brasa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos_index.css" />
+  </head>
+  <body>
+    <header id="header" class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="img/logo_burgundy.png" alt="Logo SUA & TERRA" id="logo" />
+        </a>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li class="selected"><a href="index.html">Inicio</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="menu.html">Carta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content container">
+          <img
+            src="img/Imagen2.webp"
+            alt="Brasas encendidas en parrilla"
+            class="hero-image"
+          />
+          <div class="hero-text">
+            <h1>SUA &amp; TERRA</h1>
+            <p class="tagline">Donde el fuego abraza la tierra</p>
+            <a class="btn" href="menu.html">Ver la carta</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-preview" class="container section about">
+        <h2>La tradición de la brasa</h2>
+        <p>
+          En <strong>SUA &amp; TERRA</strong> celebramos la técnica de la
+          parrilla vasca con los mejores productos gallegos. Nuestra pasión es
+          la carne a la brasa: cortes seleccionados y cocción lenta sobre
+          madera.
+        </p>
+        <a href="conocenos.html" class="link">Conócenos</a>
+      </section>
+
+      <section id="video" class="container section video-section">
+        <h2>Un vistazo al asador</h2>
+        <video controls width="100%" preload="metadata">
+          <source src="video/Video_Promo.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+      </section>
+
+      <section id="menu-preview" class="container section menu-preview">
+        <h2>Selección de la casa</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="img/CECINA-DE-BUEY-PREMIUM.jpg" alt="Aperitivo 1" />
+            <h3>Cecina de buey</h3>
+          </article>
+          <article class="card">
+            <img
+              src="img/txuleton.jpg"
+              alt="Tomahawk de crianza"
+            />
+            <h3>Txuletón vaca vieja</h3>
+          </article>
+          <article class="card">
+            <img src="img/tarta_queso2.jpg" alt="Postre 1" />
+            <h3>Tarta de queso casera</h3>
+          </article>
+        </div>
+        <a class="link" href="menu.html">Ver carta completa</a>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; <span id="year"></span> SUA &amp; TERRA</p>
+        <p>Dirección: Rúa Falsa, 1 — Galicia</p>
+        <p>Autor: Brea_Fraga_Adam</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

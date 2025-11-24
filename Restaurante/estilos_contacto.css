@@ -1,0 +1,50 @@
+@import url("estilos_index.css");
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--granate);
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+}
+
+.btn {
+  background: var(--granate);
+  color: var(--beige);
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: var(--brasa);
+}
+
+.contact-info h2 {
+  color: var(--granate);
+}
+
+a{
+  color: var(--granate);
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
