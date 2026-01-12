@@ -272,7 +272,88 @@ const questions = [
   {question: "¿Qué tasa se paga al ayuntamiento para abrir el local?", options: ["IVA", "IRPF", "Tasa por licencia de apertura", "IAE"], correct: 2},
   {question: "¿Quiénes cotizan en el régimen RETA?", options: ["Trabajadores por cuenta ajena", "Autónomos", "Funcionarios", "Desempleados"], correct: 1},
   {question: "¿Cómo se llama el proceso de dar validez legal a los libros contables?", options: ["Liquidación", "Legalización", "Fiscalización", "Auditoría"], correct: 1},
+
+  {question: "¿Qué criterio define a una empresa como 'Mediana' según el número de trabajadores?", options: ["Entre 10 y 49", "Entre 50 y 249", "Más de 250", "Menos de 10"], correct: 1},
+  {question: "¿En qué sector económico se encuadran las empresas extractivas (minería, agricultura)?", options: ["Sector Primario", "Sector Secundario", "Sector Terciario", "Sector Cuaternario"], correct: 0},
+  {question: "¿Cómo se llama la sociedad formada por al menos 3 socios donde el capital es variable?", options: ["Sociedad Anónima", "Cooperativa", "Sociedad Civil", "Sociedad Limitada"], correct: 1},
+  {question: "¿Qué es una empresa 'deslocalizada'?", options: ["Una empresa sin sede física", "Una que traslada su producción a otro país para reducir costes", "Una empresa sumergida", "Una franquicia"], correct: 1},
+  {question: "¿Qué caracteriza a la Sociedad Comanditaria por Acciones?", options: ["No tiene socios colectivos", "Al menos un socio gestiona y responde ilimitadamente", "Todos los socios son iguales", "No requiere capital mínimo"], correct: 1},
+
+  // --- Trámites y Seguridad Social (EIE06) ---
+  {question: "¿Qué es el código CNAE?", options: ["Un código de identificación fiscal", "La Clasificación Nacional de Actividades Económicas", "El número de la Seguridad Social", "Un tipo de contrato"], correct: 1},
+  {question: "¿Qué documento deben formalizar los socios ante notario para recoger los estatutos?", options: ["Certificado de denominación", "Escritura Pública de Constitución", "Modelo 036", "Alta en el IAE"], correct: 1},
+  {question: "¿Cuál es la función del Registro Mercantil?", options: ["Cobrar impuestos", "Dar publicidad legal a los actos de las sociedades", "Asignar el CIF definitivo", "Gestionar las licencias de obra"], correct: 1},
+  {question: "¿Qué trámite se realiza para comunicar la apertura de un centro de trabajo?", options: ["Alta en el IRPF", "Comunicación a la Autoridad Laboral", "Inscripción en el Registro de la Propiedad", "Solicitud del vado municipal"], correct: 1},
+  {question: "¿Qué es el sistema RED de la Seguridad Social?", options: ["Un sistema de búsqueda de empleo", "Una plataforma para la gestión telemática de datos de empresa y trabajadores", "Un impuesto sobre la renta", "Un sindicato"], correct: 1},
+  {question: "¿A partir de qué fecha será obligatoria la factura electrónica para todas las empresas según la ley?", options: ["1 de enero de 2024", "1 de julio de 2025", "Ya es obligatoria", "En 2030"], correct: 1},
+
+  // --- Plan de Empresa y Viabilidad (IPEII05) ---
+  {question: "¿Qué muestra el Plan de Operaciones o Producción?", options: ["El sueldo de los directivos", "El proceso de fabricación o prestación del servicio", "La inversión en publicidad", "El análisis de la competencia"], correct: 1},
+  {question: "En el análisis DAFO, ¿qué representan las 'Amenazas'?", options: ["Factores internos negativos", "Factores externos que pueden perjudicar al negocio", "Puntos fuertes del equipo", "Estrategias de marketing"], correct: 1},
+  {question: "¿Qué es el Plan de Recursos Humanos?", options: ["Un listado de clientes", "La definición de puestos, organigrama y perfiles", "El presupuesto de ventas", "La elección del local"], correct: 1},
+  {question: "¿Qué se analiza en el 'Estudio de Mercado'?", options: ["Solo los gastos del local", "Clientes potenciales, competencia y entorno", "El pago de impuestos", "La constitución ante notario"], correct: 1},
+  {question: "¿Qué mide el 'VAN' (Valor Actual Neto)?", options: ["La velocidad de las ventas", "La rentabilidad de una inversión actualizando los flujos de caja", "El número de socios", "El valor de las máquinas"], correct: 1},
+  
+  // --- Otros detalles técnicos ---
+  {question: "¿Qué es el Seguro de Responsabilidad Civil?", options: ["Un impuesto obligatorio", "Un seguro para cubrir daños a terceros durante la actividad", "Un plan de pensiones", "Una tasa municipal"], correct: 1},
+  {question: "¿Qué organismo emite los Certificados Digitales (como el de la FNMT)?", options: ["El Ayuntamiento", "La Fábrica Nacional de Moneda y Timbre", "El Banco de España", "La policía"], correct: 1},
+  {question: "¿Qué significa que una empresa tenga 'Responsabilidad Solidaria'?", options: ["Que cada socio responde solo por su parte", "Que se puede exigir la totalidad de la deuda a cualquier socio", "Que no hay que pagar deudas", "Que el Estado paga las deudas"], correct: 1},
+
+  {question: "¿Qué es una empresa 'pública' según la propiedad del capital?", options: ["La que cotiza en bolsa", "Aquella cuyo capital pertenece al Estado o entes públicos", "La que ofrece servicios gratuitos", "Cualquier sociedad anónima"], correct: 1},
+  {question: "¿En qué consiste la responsabilidad 'subsidiaria' en una sociedad?", options: ["Los socios responden a la vez que la sociedad", "Los socios responden solo si la sociedad no tiene bienes suficientes", "El Estado paga las deudas", "La responsabilidad es limitada al capital"], correct: 1},
+  {question: "¿Cuál es el número mínimo de socios para constituir una Sociedad Cooperativa de primer grado?", options: ["2 socios", "3 socios", "5 socios", "10 socios"], correct: 1},
+  {question: "¿Qué figura jurídica permite limitar la responsabilidad afectando solo a los bienes vinculados a la actividad (con excepciones)?", options: ["Emprendedor de Responsabilidad Limitada (ERL)", "Sociedad Colectiva", "Comunidad de Bienes", "Empresario Individual común"], correct: 0},
+
+  // --- Trámites en Seguridad Social y Laboral (EIE06) ---
+  {question: "¿Qué es el modelo TA.1?", options: ["El alta en Hacienda", "La solicitud de afiliación a la Seguridad Social (número de SS)", "El alta del centro de trabajo", "El contrato de alquiler"], correct: 1},
+  {question: "¿Cómo se llama el trámite de dar de alta a la empresa para que pueda contratar trabajadores?", options: ["Afiliación", "Inscripción de la empresa", "Censo de empresarios", "Legalización de libros"], correct: 1},
+  {question: "¿Cuál es el plazo para formalizar el contrato de trabajo en la oficina de empleo?", options: ["30 días", "10 días", "60 días", "No hay plazo"], correct: 1},
+  {question: "¿Qué organismo gestiona las prestaciones por accidentes de trabajo y enfermedades profesionales?", options: ["El Ayuntamiento", "Las Mutuas colaboradoras con la Seguridad Social", "La Agencia Tributaria", "El Registro Mercantil"], correct: 1},
+
+  // --- Libros y Contabilidad (EIE06 / IPEII05) ---
+  {question: "¿Qué libro contable registra las operaciones día a día cronológicamente?", options: ["Libro de Actas", "Libro Diario", "Libro de Socios", "Libro de Inventarios"], correct: 1},
+  {question: "¿Cada cuánto tiempo deben presentarse las cuentas anuales en el Registro Mercantil?", options: ["Mensualmente", "Trimestralmente", "Una vez al año", "Cada dos años"], correct: 2},
+  {question: "¿Qué libro es específico y obligatorio solo para las Sociedades Anónimas con acciones nominativas?", options: ["Libro Registro de Socios", "Libro de Acciones Nominativas", "Libro de Visitas", "Libro de Caja"], correct: 1},
+
+  // --- Marketing y Estrategia (IPEII05) ---
+  {question: "¿A qué se refiere la 'Segmentación de Mercado'?", options: ["A dividir el local en secciones", "A dividir a los clientes en grupos con características comunes", "A bajar los precios para competir", "A contratar personal especializado"], correct: 1},
+  {question: "¿Qué son los 'Canales de Distribución'?", options: ["Las vías por las que el producto llega al consumidor", "Los anuncios en televisión", "Los camiones de la empresa", "Las redes sociales"], correct: 0},
+  {question: "¿Qué parte del marketing mix se refiere a la comunicación y publicidad?", options: ["Producto", "Precio", "Distribución", "Promoción"], correct: 3},
+
+  // --- Viabilidad y Finanzas (IPEII05) ---
+  {question: "¿Qué diferencia hay entre Costes Fijos y Costes Variables?", options: ["Los fijos son más caros", "Los variables dependen del volumen de producción", "Los fijos solo se pagan una vez", "No hay diferencia"], correct: 1},
+  {question: "¿Qué es el 'Flujo de Caja' (Cash Flow)?", options: ["El dinero que hay en la caja fuerte", "La diferencia entre cobros y pagos en un periodo", "El beneficio neto después de impuestos", "El valor de las acciones"], correct: 1},
+  {question: "¿Qué indica una TIR (Tasa Interna de Retorno) superior al interés del mercado?", options: ["Que el proyecto no es rentable", "Que el proyecto es potencialmente rentable", "Que la empresa tiene muchas deudas", "Que hay que cerrar el negocio"], correct: 1},
+
+  // --- Entorno y Digitalización (IPEII05) ---
+  {question: "¿Qué significan las siglas ODS en el contexto del proyecto emprendedor?", options: ["Objetivos de Desarrollo Sostenible", "Orden de Servicios Directos", "Organización de Sistemas Digitales", "Obligaciones de Datos Seguros"], correct: 0},
+  {question: "¿Qué tecnología permite verificar la identidad del firmante en trámites online?", options: ["Contraseña de email", "Firma Electrónica / Certificado Digital", "Nombre de usuario", "Código de barras"], correct: 1},
+  {question: "¿Qué normativa regula la eliminación de barreras arquitectónicas en un local?", options: ["Ley de Propiedad Horizontal", "Normativa sobre accesibilidad", "Código de Comercio", "Ley de Prevención de Riesgos"], correct: 1},
+  {question: "¿Qué es el Plan General de Ordenación Urbana (PGOU)?", options: ["Un plan de marketing", "La norma municipal que define los usos autorizados de los locales", "Un impuesto estatal", "Un registro de empresas"], correct: 1},
+  {question: "¿Qué documento es obligatorio tener en el centro de trabajo para las visitas de la Inspección de Trabajo?", options: ["Libro de Visitas (actualmente digitalizado)", "Contrato de alquiler", "Título universitario del jefe", "Facturas de proveedores"], correct: 0},
+  {question: "¿Qué tipo de actividad requiere una 'licencia de actividad calificada'?", options: ["Una oficina de consultoría", "Actividades molestas, insalubres, nocivas o peligrosas", "Venta de ropa online", "Cualquier actividad comercial"], correct: 1},
+
+  // --- Gestión de Socios y Capital (EIE04 / EIE06) ---
+  {question: "¿Cómo se acredita el desembolso del capital social ante notario?", options: ["Con una foto del dinero", "Mediante certificación bancaria de depósito", "Con una promesa por escrito", "No es necesario acreditarlo"], correct: 1},
+  {question: "¿En qué sociedad el capital mínimo debe estar desembolsado al menos en un 25% al inicio?", options: ["Sociedad Limitada", "Sociedad Anónima", "Sociedad Cooperativa", "Comunidad de Bienes"], correct: 1},
+  {question: "¿Qué libro deben llevar obligatoriamente las Sociedades Limitadas para identificar a sus dueños?", options: ["Libro de Acciones", "Libro Registro de Socios", "Libro Diario", "Libro de Inventarios"], correct: 1},
+  {question: "¿Qué sucede si una sociedad tiene un solo socio?", options: ["Es ilegal", "Se denomina Sociedad Unipersonal (S.L.U. o S.A.U.)", "Debe cerrar en un mes", "No paga impuestos"], correct: 1},
+
+  // --- Obligaciones Digitales y Facturación (IPEII05) ---
+  {question: "¿A partir de qué fecha deberán remitir sus facturas a Hacienda de forma instantánea las empresas que facturan menos de 6 millones?", options: ["Enero 2024", "Julio 2025", "Diciembre 2026", "Ya es obligatorio"], correct: 1},
+  {question: "¿Qué organismo emite los certificados digitales necesarios para las notificaciones electrónicas?", options: ["El Registro Mercantil", "La FNMT (Fábrica Nacional de Moneda y Timbre)", "Correos", "El Banco de España"], correct: 1},
+  {question: "¿Qué normativa obliga a proteger los datos personales de clientes y empleados?", options: ["LSSI", "RGPD (Reglamento General de Protección de Datos)", "Ley de Sociedades de Capital", "Código Civil"], correct: 1},
+
+  // --- Estrategia y Operaciones (IPEII05) ---
+  {question: "¿Qué es un 'prototipo' o Producto Mínimo Viable (MVP)?", options: ["El producto final de lujo", "Una versión básica para probar el concepto en el mercado", "Un folleto publicitario", "Una encuesta"], correct: 1},
+  {question: "¿Qué analiza el Plan de Aprovisionamiento?", options: ["La selección de proveedores y gestión de existencias", "El despido de trabajadores", "La campaña de radio", "La escritura notarial"], correct: 0},
+  {question: "¿Qué es la 'Propuesta de Valor' en el Modelo Canvas?", options: ["El precio más bajo del mercado", "Lo que hace especial al producto y resuelve el problema del cliente", "El sueldo de los socios", "El local físico"], correct: 1},
+
+  // --- Clasificación de Empresas (EIE04) ---
+  {question: "¿Qué es una empresa 'local'?", options: ["La que vende en todo el mundo", "Aquella que desarrolla su actividad en una sola población", "Una empresa sin local físico", "Una empresa que solo abre por las mañanas"], correct: 1},
+  {question: "¿Cómo se clasifican las empresas según su forma jurídica?", options: ["Grandes y pequeñas", "Individuales y Sociedades", "Locales y Nacionales", "Primarias y Secundarias"], correct: 1}
 ];
+
 
 const total = questions.length;
 
