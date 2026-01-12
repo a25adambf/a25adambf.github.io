@@ -1,109 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>SUA & TERRA — El sabor del norte a la brasa</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="estilos_index.css" />
-  </head>
-  <body>
-    <header id="header" class="site-header">
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="img/logo_burgundy.png" alt="Logo SUA & TERRA" id="logo" />
-        </a>
+<head>
+<meta charset="UTF-8">
+<title>Test Emprendimiento y Marketing</title>
 
-        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-          <ul>
-            <li class="selected"><a href="index.html">Inicio</a></li>
-            <li><a href="conocenos.html">Conócenos</a></li>
-            <li><a href="menu.html">Carta</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
+<style>
+:root {
+  --bg: #f2f4f7;
+  --card: #ffffff;
+  --text: #000000;
+  --correct: #2e7d32;
+  --incorrect: #c62828;
+  --selected: #1565c0;
+}
 
-        <button
-          id="nav-toggle"
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="main-nav"
-        >
-          ☰
-        </button>
-      </div>
-    </header>
+.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+}
 
-    <main>
-      <section id="hero" class="hero">
-        <div class="hero-content container">
-          <img
-            src="img/Imagen2.webp"
-            alt="Brasas encendidas en parrilla"
-            class="hero-image"
-          />
-          <div class="hero-text">
-            <h1>SUA &amp; TERRA</h1>
-            <p class="tagline">Donde el fuego abraza la tierra</p>
-            <a class="btn" href="menu.html">Ver la carta</a>
-          </div>
-        </div>
-      </section>
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  transition: 0.3s;
+}
 
-      <section id="about-preview" class="container section about">
-        <h2>La tradición de la brasa</h2>
-        <p>
-          En <strong>SUA &amp; TERRA</strong> celebramos la técnica de la
-          parrilla vasca con los mejores productos gallegos. Nuestra pasión es
-          la carne a la brasa: cortes seleccionados y cocción lenta sobre
-          madera.
-        </p>
-        <a href="conocenos.html" class="link">Conócenos</a>
-      </section>
+h1 { text-align: center; }
 
-      <section id="video" class="container section video-section">
-        <h2>Un vistazo al asador</h2>
-        <video controls width="100%" preload="metadata">
-          <source src="video/Video_Promo.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento <code>video</code>.
-        </video>
-      </section>
+#controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
-      <section id="menu-preview" class="container section menu-preview">
-        <h2>Selección de la casa</h2>
-        <div class="cards">
-          <article class="card">
-            <img src="img/CECINA-DE-BUEY-PREMIUM.jpg" alt="Aperitivo 1" />
-            <h3>Cecina de buey</h3>
-          </article>
-          <article class="card">
-            <img
-              src="img/txuleton.jpg"
-              alt="Tomahawk de crianza"
-            />
-            <h3>Txuletón vaca vieja</h3>
-          </article>
-          <article class="card">
-            <img src="img/tarta_queso2.jpg" alt="Postre 1" />
-            <h3>Tarta de queso casera</h3>
-          </article>
-        </div>
-        <a class="link" href="menu.html">Ver carta completa</a>
-      </section>
-    </main>
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 
-    <footer id="footer" class="site-footer">
-      <div class="container footer-content">
-        <p>&copy; <span id="year"></span> SUA &amp; TERRA</p>
-        <p>Dirección: Rúa Falsa, 1 — Galicia</p>
-        <p>Autor: Brea_Fraga_Adam</p>
-      </div>
-    </footer>
+.progress-container {
+  width: 100%;
+  background: #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 
-    <script src="scripts.js"></script>
-  </body>
+.progress-bar {
+  height: 14px;
+  width: 0%;
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+.question {
+  background: var(--card);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.option {
+  display: block;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.option.selected {
+  background: rgba(21,101,192,0.15);
+  color: var(--selected);
+  font-weight: bold;
+}
+
+.option.correct {
+  background: rgba(46,125,50,0.15);
+  color: var(--correct);
+  font-weight: bold;
+}
+
+.option.incorrect {
+  background: rgba(198,40,40,0.15);
+  color: var(--incorrect);
+  font-weight: bold;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.85;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Test de Emprendimiento y Plan de Marketing</h1>
+
+<div id="controls">
+  <div id="score">Aciertos: 0</div>
+  <button onclick="toggleDark()">🌙 Modo oscuro</button>
+</div>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progress"></div>
+</div>
+
+<div id="quiz"></div>
+
+<script>
+let score = 0;
+let answered = 0;
+
+const questions = [
+  // --- BLOQUE 1: FORMAS JURÍDICAS (EIE04) ---
+  {question: "¿Cómo se llama la sociedad donde los socios solo aportan trabajo?", options: ["Sociedad Anónima", "Sociedad Comanditaria", "Sociedad Laboral", "Sociedad de Responsabilidad Limitada"], correct: 2},
+  {question: "¿Qué tipo de sociedad requiere un capital mínimo de 60.000€?", options: ["S.R.L.", "S.A.", "S. Civil", "S. Cooperativa"], correct: 1},
+  {question: "¿Cuál es el número mínimo de socios en una Sociedad Limitada Nueva Empresa (SLNE)?", options: ["Máximo 5", "Mínimo 3", "Mínimo 10", "No hay límite"], correct: 0},
+  {question: "En una Sociedad Comanditaria simple, ¿qué socios responden de forma ilimitada?", options: ["Los comanditarios", "Los colectivos", "Todos los socios", "Ninguno"], correct: 1},
+  {question: "¿Qué forma jurídica no tiene personalidad jurídica propia?", options: ["Sociedad Cooperativa", "Sociedad Anónima", "Comunidad de Bienes", "Sociedad Limitada"], correct: 2},
+  {question: "¿Qué empresa se define por no tener ánimo de lucro y buscar la ayuda mutua?", options: ["Sociedad Laboral", "Cooperativa", "Sociedad Comanditaria", "Autónomo"], correct: 1},
+  {question: "¿Qué ocurre con la responsabilidad en una Sociedad de Responsabilidad Limitada?", options: ["Los socios responden con su patrimonio personal", "Los socios solo responden con el capital aportado", "No hay responsabilidad", "La responsabilidad es solidaria e ilimitada"], correct: 1},
+
+  // --- BLOQUE 2: TRÁMITES DE CONSTITUCIÓN (EIE06) ---
+  {question: "¿Cuál es el impuesto que grava la constitución de una sociedad (ITP y AJD)?", options: ["IVA", "Impuesto sobre Transmisiones Patrimoniales", "IRPF", "Impuesto de Sociedades"], correct: 1},
+  {question: "¿Qué trámite debe hacerse en el Ayuntamiento antes de abrir físicamente el local?", options: ["Solicitud de CIF", "Licencia de Actividad o Apertura", "Alta en el IAE", "Afiliación a la Seguridad Social"], correct: 1},
+  {question: "¿Qué documento sustituye a varios trámites presenciales en el sistema DUE?", options: ["Escritura Pública", "Documento Único Electrónico", "Modelo 036", "Certificado Digital"], correct: 1},
+  {question: "¿Qué libro es obligatorio legalizar en el Registro Mercantil para registrar las decisiones de las juntas?", options: ["Libro Diario", "Libro de Actas", "Libro de Inventarios", "Libro de Facturas"], correct: 1},
+  {question: "¿En qué régimen de la Seguridad Social se inscribe el empresario individual?", options: ["Régimen General", "RETA (Autónomos)", "Régimen Agrario", "No se inscribe"], correct: 1},
+  {question: "¿Qué organismo asigna el número de patronal a la empresa?", options: ["Agencia Tributaria", "Tesorería General de la Seguridad Social", "Registro Mercantil", "Notaría"], correct: 1},
+  {question: "¿Qué modelo se usa para la declaración censal simplificada?", options: ["Modelo 036", "Modelo 037", "Modelo 111", "Modelo 303"], correct: 1},
+
+  // --- BLOQUE 3: EL PROYECTO EMPRENDEDOR (IPEII05) ---
+  {question: "¿Qué analiza el 'Análisis PEST'?", options: ["La competencia directa", "Factores Políticos, Económicos, Sociales y Tecnológicos", "Los costes de producción", "La satisfacción del cliente"], correct: 1},
+  {question: "¿Cómo se llama la parte del plan que describe cómo se dará a conocer el producto?", options: ["Plan de Producción", "Plan de Marketing", "Plan Jurídico", "Plan de Recursos Humanos"], correct: 1},
+  {question: "En el análisis DAFO, ¿cuáles son factores internos?", options: ["Amenazas y Oportunidades", "Fortalezas y Debilidades", "Debilidades y Amenazas", "Fortalezas y Oportunidades"], correct: 1},
+  {question: "¿Qué es el 'Lean Startup'?", options: ["Un método de financiación", "Una metodología para lanzar negocios basada en el aprendizaje validado", "Un tipo de contrato laboral", "Una oficina para emprendedores"], correct: 1},
+  {question: "¿Qué refleja el Balance de Situación?", options: ["Los ingresos y gastos mensuales", "El patrimonio de la empresa en un momento dado", "El número de empleados", "La estrategia de ventas"], correct: 1},
+  {question: "¿A qué se refiere el término 'Escalabilidad'?", options: ["A la capacidad de crecer sin aumentar proporcionalmente los costes", "A la altura del local comercial", "A la jerarquía de los jefes", "A la cantidad de socios"], correct: 0},
+  {question: "¿Qué es el Canvas?", options: ["Un software de contabilidad", "Un lienzo para diseñar modelos de negocio de forma visual", "Un tipo de sociedad mercantil", "Un impuesto municipal"], correct: 1},
+
+  // --- BLOQUE 4: FISCALIDAD Y OTROS (MIXTO) ---
+  {question: "¿Qué impuesto deben pagar las sociedades sobre sus beneficios?", options: ["IVA", "IRPF", "Impuesto de Sociedades", "IAE"], correct: 2},
+  {question: "¿Quién emite la Certificación Negativa del Nombre?", options: ["El Banco de España", "El Registro Mercantil Central", "La Casa de la Moneda", "El Ministerio de Trabajo"], correct: 1},
+  {question: "¿Cuál es el plazo máximo para inscribir la escritura en el Registro Mercantil?", options: ["2 meses", "15 días", "6 meses", "No hay plazo"], correct: 0},
+  {question: "¿Qué significa el término 'Factura Electrónica'?", options: ["Un correo avisando del pago", "Un documento tributario emitido y recibido en formato electrónico", "Una foto de una factura en papel", "Un ticket de caja"], correct: 1}
+
+  {question: "¿Qué caracteriza a un empresario individual?", options: ["Personalidad jurídica propia", "Responsabilidad limitada", "Responsabilidad ilimitada", "Mínimo 2 socios"], correct: 2},
+  {question: "¿Cuál es el capital mínimo para una Sociedad Limitada (SRL)?", options: ["60.000€", "3.000€", "1€ (según Ley Crea y Crece)", "No tiene mínimo"], correct: 2},
+  {question: "¿Qué sociedad tiene el capital dividido en acciones?", options: ["Sociedad Limitada", "Sociedad Anónima", "Sociedad Colectiva", "Sociedad Civil"], correct: 1},
+  {question: "En una Sociedad Laboral, ¿qué porcentaje de capital debe estar en manos de los trabajadores?", options: ["Al menos el 51%", "El 100%", "Al menos el 25%", "No hay límite"], correct: 0},
+  {question: "¿Qué tipo de empresa busca el beneficio común de sus socios mediante una actividad empresarial?", options: ["Sociedad Anónima", "Cooperativa", "Empresa Individual", "Sociedad Comanditaria"], correct: 1},
+  
+  // --- Trámites para la creación (EIE06) ---
+  {question: "¿Dónde se solicita la Certificación Negativa del Nombre?", options: ["Agencia Tributaria", "Registro Mercantil Central", "Seguridad Social", "Ayuntamiento"], correct: 1},
+  {question: "¿Qué documento acredita el alta en el censo de empresarios?", options: ["Modelo 036 o 037", "Modelo 111", "Escritura Pública", "Libro de Visitas"], correct: 0},
+  {question: "¿Cuál es el plazo para dar de alta la empresa en la Seguridad Social?", options: ["30 días después", "Antes del inicio de la actividad", "Un año después", "No es obligatorio"], correct: 1},
+  {question: "¿Qué trámite se realiza ante Notario para crear una sociedad?", options: ["El CIF", "La Escritura Pública", "El Impuesto de Actividades Económicas", "La Licencia de Apertura"], correct: 1},
+  {question: "¿A qué organismo se acude para obtener el CIF provisional?", options: ["Ayuntamiento", "Seguridad Social", "Agencia Tributaria", "Registro de la Propiedad"], correct: 2},
+
+  // --- El Proyecto Emprendedor (IPEII05) ---
+  {question: "¿Qué es el Plan de Empresa?", options: ["Un folleto publicitario", "Un documento que describe el proyecto y su viabilidad", "Un listado de precios", "Un contrato de alquiler"], correct: 1},
+  {question: "¿Cuál es el objetivo del análisis DAFO?", options: ["Calcular impuestos", "Analizar debilidades, amenazas, fortalezas y oportunidades", "Elegir el nombre", "Contratar personal"], correct: 1},
+  {question: "¿Qué evalúa el plan financiero?", options: ["La competencia", "La viabilidad económica del proyecto", "La ubicación del local", "Los procesos de producción"], correct: 1},
+  {question: "¿Qué es el Punto de Equilibrio o Umbral de Rentabilidad?", options: ["El máximo de ventas", "El volumen de ventas donde el beneficio es cero", "El pago de la primera nómina", "La inversión inicial"], correct: 1},
+  {question: "¿Qué herramienta se usa para definir el modelo de negocio de forma visual?", options: ["Diagrama de Gantt", "Modelo Canvas", "Balance de Situación", "Cuenta de Resultados"], correct: 1},
+
+  // ... Continúa con preguntas similares hasta 100 extrayendo detalles como:
+  {question: "¿Qué libro es obligatorio para una Sociedad Limitada?", options: ["Libro de Acciones", "Libro Registro de Socios", "Libro de Familia", "No tiene libros"], correct: 1},
+  {question: "¿Qué es la responsabilidad patrimonial universal?", options: ["Responder solo con lo invertido", "Responder con bienes presentes y futuros", "No responder de las deudas", "Seguro de impagos"], correct: 1},
+  {question: "¿Qué tasa se paga al ayuntamiento para abrir el local?", options: ["IVA", "IRPF", "Tasa por licencia de apertura", "IAE"], correct: 2},
+  {question: "¿Quiénes cotizan en el régimen RETA?", options: ["Trabajadores por cuenta ajena", "Autónomos", "Funcionarios", "Desempleados"], correct: 1},
+  {question: "¿Cómo se llama el proceso de dar validez legal a los libros contables?", options: ["Liquidación", "Legalización", "Fiscalización", "Auditoría"], correct: 1}
+
+
+];
+
+const total = questions.length;
+
+function loadQuiz() {
+  const quiz = document.getElementById("quiz");
+  questions.forEach((q, i) => {
+    const div = document.createElement("div");
+    div.className = "question";
+    div.innerHTML = `<p>${i+1}. ${q.question}</p>`;
+
+    q.options.forEach((opt, j) => {
+      const label = document.createElement("label");
+      label.className = "option";
+      label.innerHTML = `
+        <input type="radio" name="q${i}">
+        ${opt}
+      `;
+      label.querySelector("input").addEventListener("change", () => {
+        checkAnswer(i, j, label, div);
+      });
+      div.appendChild(label);
+    });
+
+    quiz.appendChild(div);
+  });
+}
+
+function checkAnswer(i, selected, selectedLabel, container) {
+  if (container.classList.contains("disabled")) return;
+  container.classList.add("disabled");
+  answered++;
+
+  const labels = container.querySelectorAll(".option");
+  labels[selected].classList.add("selected");
+
+  labels.forEach((label, index) => {
+    if (index === questions[i].correct) {
+      label.classList.add("correct");
+    }
+    if (index === selected && selected !== questions[i].correct) {
+      label.classList.add("incorrect");
+    }
+  });
+
+  if (selected === questions[i].correct) score++;
+
+  document.getElementById("score").textContent = `Aciertos: ${score}`;
+  document.getElementById("progress").style.width = `${(answered / total) * 100}%`;
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+loadQuiz();
+</script>
+
+</body>
 </html>
